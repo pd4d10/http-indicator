@@ -19,3 +19,20 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   chrome.browserAction.setIcon({ path: 'icons/' + icon + '.png', tabId })
   chrome.browserAction.setTitle({ tabId, title })
 })
+
+chrome.browserAction.onClicked.addListener(tab => {
+  chrome.browserAction.getTitle({ tabId: tab.id }, result => {
+    switch (result) {
+      case 'HTTP/2':
+        chrome.tabs.create({
+          url: 'chrome://net-internals/#http2',
+        })
+        break
+      case 'HTTP/2 + QUIC/39':
+        chrome.tabs.create({
+          url: 'chrome://net-internals/#quic',
+        })
+        break
+    }
+  })
+})
