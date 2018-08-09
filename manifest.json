@@ -8,6 +8,7 @@
     "128": "icons/hq.png"
   },
   "background": {
+    "persistent": false,
     "scripts": ["background.js"]
   },
   "content_scripts": [
