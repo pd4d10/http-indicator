@@ -5,7 +5,7 @@
   "description": "Indicator for HTTP/2 and QUIC support",
   "homepage_url": "https://github.com/pd4d10/http-indicator",
   "icons": {
-    "128": "icons/hq.png"
+    "128": "icons/icon.png"
   },
   "background": {
     "persistent": false,
