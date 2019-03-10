@@ -32,15 +32,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 })
 
 chrome.browserAction.onClicked.addListener(tab => {
-  chrome.browserAction.getTitle({ tabId: tab.id }, title => {
-    if (title === h2Title) {
-      chrome.tabs.create({
-        url: 'chrome://net-internals/#http2',
-      })
-    } else if (title === hqTitle || title.includes('quic')) {
-      chrome.tabs.create({
-        url: 'chrome://net-internals/#quic',
-      })
-    }
+  chrome.tabs.create({
+    url: 'chrome://net-export',
   })
 })
