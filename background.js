@@ -19,7 +19,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   } else if (message === 'hq') {
     title = hqTitle
     icon = 'hq'
-  } else if (message.includes('quic')) {
+  } else if (message.includes('quic') || message.startsWith('h3')) {
     title = message
     icon = 'hq'
   } else {
