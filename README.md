@@ -1,6 +1,6 @@
 # HTTP Indicator
 
-Indicator for HTTP/2 and QUIC support. [Chrome Web Store](https://chrome.google.com/webstore/detail/http-indicator/hgcomhbcacfkpffiphlmnlhpppcjgmbl)
+Indicator for HTTP/2, QUIC and HTTP/3 support. [Chrome Web Store](https://chrome.google.com/webstore/detail/http-indicator/hgcomhbcacfkpffiphlmnlhpppcjgmbl)
 
 <img width="752" src="assets/screenshot-1.png" alt="screenshot" />
 
