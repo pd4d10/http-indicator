@@ -4,7 +4,7 @@
 [![users](https://badgen.net/chrome-web-store/users/hgcomhbcacfkpffiphlmnlhpppcjgmbl)](https://chrome.google.com/webstore/detail/hgcomhbcacfkpffiphlmnlhpppcjgmbl)
 [![rating](https://badgen.net/chrome-web-store/stars/hgcomhbcacfkpffiphlmnlhpppcjgmbl)](https://chrome.google.com/webstore/detail/hgcomhbcacfkpffiphlmnlhpppcjgmbl)
 
-Indicator for HTTP/2, QUIC and HTTP/3 support. Install it from [Chrome Web Store](https://chrome.google.com/webstore/detail/hgcomhbcacfkpffiphlmnlhpppcjgmbl).
+Indicator for HTTP/2, QUIC and HTTP/3. Install it from [Chrome Web Store](https://chrome.google.com/webstore/detail/hgcomhbcacfkpffiphlmnlhpppcjgmbl).
 
 <img width="752" src="assets/screenshot-1.png" alt="screenshot" />
 
@@ -12,7 +12,7 @@ This extension is an alternative to [HTTP/2 and SPDY indicators](https://chrome.
 
 ## Credits
 
-Icons taken from [HTTP/2 and SPDY indicators](https://chrome.google.com/webstore/detail/http2-and-spdy-indicator/mpbpobfflnpcgagjijhmgnchggcjblin).
+- [Ionicons](https://ionicons.com/)
 
 ## License
 
