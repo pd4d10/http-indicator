@@ -3,40 +3,33 @@ const path = require("path");
 const { execSync } = require("child_process");
 
 // Icons: https://ionicons.com/
-const icon = fs
-  .readFileSync(path.join(__dirname, "flash.svg"), "utf8")
-  .replace("viewBox='0 0 512 512'", "viewBox='-32 -32 576 576'");
-const iconOutline = fs
-  .readFileSync(path.join(__dirname, "flash-outline.svg"), "utf8")
-  .replace("viewBox='0 0 512 512'", "viewBox='-32 -32 576 576'");
+const icon = fs.readFileSync(path.join(__dirname, "flash-sharp.svg"), "utf8");
 
 // Colors: https://material.io/resources/color/#!/?view.left=0&view.right=0
 [
-  ["h1", "#bdbdbd", 38],
-  ["h2", "#304ffe", 38],
-  ["hq", "#d50000", 38],
-  ["h3", "#ff6d00", 38],
-  ["icon", "#ff6d00", 128],
-].forEach(([name, color, size]) => {
-  fs.writeFileSync(
-    path.join(__dirname, "../icons", `${name}.svg`),
-    icon
-      .replace("width='512' height='512'", `width='${size}' height='${size}'`)
-      .replace("<path", `<path fill="${color}"`)
+  ["h1", "#bdbdbd", , 38],
+  ["h2", "#304ffe", , 38],
+  ["hq", "#d50000", , 38],
+  ["h3", "#ff6d00", , 38],
+  ["icon", "#ff6d00", , 128],
+  ["default", , "#bdbdbd", 38],
+].forEach(([name, fill, stroke, size]) => {
+  let mIcon = icon.replace(
+    "width='512' height='512'",
+    `width='${size}' height='${size}'`
   );
-  execSync(`rm -rf ${name}.png && svg2png ${name}.svg`, {
-    cwd: path.join(__dirname, "../icons"),
-  });
-});
+  if (fill) {
+    mIcon = mIcon.replace("<path", `<path fill="${fill}"`);
+  }
+  if (stroke) {
+    mIcon = mIcon.replace(
+      "<path",
+      `<path stroke="${stroke}" stroke-width="16" fill="none"`
+    );
+  }
 
-// default
-[["default", "#bdbdbd", 38]].forEach(([name, color, size]) => {
-  fs.writeFileSync(
-    path.join(__dirname, "../icons", `${name}.svg`),
-    iconOutline
-      .replace("width='512' height='512'", `width='${size}' height='${size}'`)
-      .replace("stroke:#000;", `stroke:${color};`)
-  );
+  fs.writeFileSync(path.join(__dirname, "../icons", `${name}.svg`), mIcon);
+
   execSync(`rm -rf ${name}.png && svg2png ${name}.svg`, {
     cwd: path.join(__dirname, "../icons"),
   });
