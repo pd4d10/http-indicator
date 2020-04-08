@@ -9,20 +9,24 @@ const flashOutline = fs.readFileSync(
   "utf8"
 );
 
-const i38 = flash
-  .replace("width='512' height='512'", "width='38' height='38'")
-  .replace("viewBox='0 0 512 512'", "viewBox='-32 -32 576 576'");
+const icon = flash.replace(
+  "viewBox='0 0 512 512'",
+  "viewBox='-32 -32 576 576'"
+);
 
 // Colors: https://material.io/resources/color/#!/?view.left=0&view.right=0
 [
-  ["h1", "#bdbdbd"],
-  ["h2", "#304ffe"],
-  ["hq", "#d50000"],
-  ["h3", "#ff6d00"],
-].forEach(([name, color]) => {
+  ["h1", "#bdbdbd", 38],
+  ["h2", "#304ffe", 38],
+  ["hq", "#d50000", 38],
+  ["h3", "#ff6d00", 38],
+  ["icon", "#ff6d00", 128],
+].forEach(([name, color, size]) => {
   fs.writeFileSync(
     path.join(__dirname, "../icons", `${name}.svg`),
-    i38.replace("<path", `<path fill="${color}"`)
+    icon
+      .replace("width='512' height='512'", `width='${size}' height='${size}'`)
+      .replace("<path", `<path fill="${color}"`)
   );
   execSync(`rm -rf ${name}.png && svg2png ${name}.svg`, {
     cwd: path.join(__dirname, "../icons"),
