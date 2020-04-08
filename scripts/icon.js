@@ -18,6 +18,7 @@ const i38 = flash
   ["h1", "#bdbdbd"],
   ["h2", "#304ffe"],
   ["hq", "#d50000"],
+  ["h3", "#ff6d00"],
 ].forEach(([name, color]) => {
   fs.writeFileSync(
     path.join(__dirname, "../icons", `${name}.svg`),

@@ -1,7 +1,3 @@
-const h2Title = "HTTP/2";
-const hqTitle = "HTTP/2 + QUIC";
-const h1Title = "HTTP/1";
-
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   const tabId = sender.tab.id;
   // console.log(message, tabId)
@@ -14,16 +10,19 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   // http/2+quic/43
   // Handle both cases for compatible
   if (message === "h2") {
-    title = h2Title;
+    title = "HTTP/2";
     icon = "h2";
   } else if (message === "hq") {
-    title = hqTitle;
+    title = "HTTP/2 + QUIC";
     icon = "hq";
-  } else if (message.includes("quic") || message.startsWith("h3")) {
+  } else if (message === "h3") {
+    title = "HTTP/3";
+    icon = "h3";
+  } else if (message.includes("quic")) {
     title = message;
     icon = "hq";
   } else {
-    title = h1Title;
+    title = "HTTP/1";
     icon = "h1";
   }
 
