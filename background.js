@@ -1,7 +1,7 @@
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   const tabId = sender.tab.id;
   // console.log(message, tabId)
-  let title;
+  let title = message;
   let icon;
 
   // h2 and hq is introduced from this post:
@@ -15,14 +15,11 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   } else if (message === "hq") {
     title = "HTTP/2 + QUIC";
     icon = "hq";
-  } else if (message === "h3") {
-    title = "HTTP/3";
+  } else if (message.startsWith("h3")) {
     icon = "h3";
   } else if (message.includes("quic")) {
-    title = message;
     icon = "hq";
   } else {
-    title = "HTTP/1";
     icon = "h1";
   }
 
