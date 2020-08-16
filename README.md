@@ -3,11 +3,12 @@
 [![chrome web store](https://badgen.net/chrome-web-store/v/hgcomhbcacfkpffiphlmnlhpppcjgmbl)](https://chrome.google.com/webstore/detail/hgcomhbcacfkpffiphlmnlhpppcjgmbl)
 [![users](https://badgen.net/chrome-web-store/users/hgcomhbcacfkpffiphlmnlhpppcjgmbl)](https://chrome.google.com/webstore/detail/hgcomhbcacfkpffiphlmnlhpppcjgmbl)
 [![stars](https://badgen.net/chrome-web-store/stars/hgcomhbcacfkpffiphlmnlhpppcjgmbl)](https://chrome.google.com/webstore/detail/hgcomhbcacfkpffiphlmnlhpppcjgmbl)
+
 [![mozilla add-on](https://badgen.net/amo/v/http-indicator)](https://addons.mozilla.org/en-US/firefox/addon/http-indicator/)
 [![users](https://badgen.net/amo/users/http-indicator)](https://addons.mozilla.org/en-US/firefox/addon/http-indicator/)
 [![stars](https://badgen.net/amo/stars/http-indicator)](https://addons.mozilla.org/en-US/firefox/addon/http-indicator/)
 
-Indicator for HTTP/2, QUIC and HTTP/3. Install it from [Chrome Web Store](https://chrome.google.com/webstore/detail/hgcomhbcacfkpffiphlmnlhpppcjgmbl).
+Indicator for HTTP/2, QUIC and HTTP/3. Install it from [Chrome Web Store](https://chrome.google.com/webstore/detail/hgcomhbcacfkpffiphlmnlhpppcjgmbl) or [Mozilla Add-on](https://addons.mozilla.org/en-US/firefox/addon/http-indicator/).
 
 <img width="752" src="assets/screenshot-1.png" alt="screenshot" />
 
