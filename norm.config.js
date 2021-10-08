@@ -4,7 +4,7 @@ const { defineConfig } = require("@norm/cli");
 module.exports = defineConfig({
   mode: "web-extension",
   manifest: {
-    manifest_version: 2,
+    manifest_version: 3,
     name: "HTTP Indicator",
     version: "0.1.0",
     description: "Indicator for HTTP/2, QUIC and HTTP/3",
@@ -13,8 +13,7 @@ module.exports = defineConfig({
       128: "icons/icon.png",
     },
     background: {
-      persistent: false,
-      scripts: ["src/background.js"],
+      service_worker: "src/background.js",
     },
     content_scripts: [
       {
@@ -23,7 +22,7 @@ module.exports = defineConfig({
         run_at: "document_end",
       },
     ],
-    browser_action: {
+    action: {
       default_icon: "icons/default.png",
     },
   },
