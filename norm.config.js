@@ -6,7 +6,7 @@ module.exports = defineConfig({
   manifest: {
     manifest_version: 2,
     name: "HTTP Indicator",
-    version: "1.0.0",
+    version: "1.0.1",
     description: "Indicator for HTTP/2, QUIC and HTTP/3",
     homepage_url: "https://github.com/pd4d10/http-indicator",
     icons: {
