@@ -23,14 +23,11 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     icon = "h1";
   }
 
-  chrome.action.setIcon({
-    path: chrome.runtime.getURL("icons/" + icon + ".png"),
-    tabId,
-  });
-  chrome.action.setTitle({ tabId, title });
+  chrome.browserAction.setIcon({ path: "icons/" + icon + ".png", tabId });
+  chrome.browserAction.setTitle({ tabId, title });
 });
 
-chrome.action.onClicked.addListener((tab) => {
+chrome.browserAction.onClicked.addListener((tab) => {
   chrome.tabs.create({
     url: "chrome://net-export",
   });
