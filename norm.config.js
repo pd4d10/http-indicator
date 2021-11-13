@@ -2,7 +2,7 @@
 const { defineConfig } = require("@norm/cli");
 
 module.exports = defineConfig({
-  mode: "web-extension",
+  type: "extension",
   manifest: {
     manifest_version: 2,
     name: "HTTP Indicator",
@@ -14,7 +14,7 @@ module.exports = defineConfig({
     },
     background: {
       persistent: false,
-      scripts: ["src/background.js"],
+      page: "background.html",
     },
     content_scripts: [
       {

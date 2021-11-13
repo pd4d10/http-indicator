@@ -1,7 +1,9 @@
 {
-  "name": "http-indicator",
   "scripts": {
     "dev": "norm",
     "build": "norm build"
+  },
+  "devDependencies": {
+    "@norm/cli": "^0.3.5"
   }
 }
