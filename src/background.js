@@ -4,18 +4,18 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   let title = message;
   let icon = "h1";
 
-  // h2 and hq is introduced from this post:
-  // https://developers.google.com/web/updates/2017/12/chrome-loadtimes-deprecated
-  // But the latest Chrome (68) seems use the value like this:
-  // http/2+quic/43
+  // h2 and hq is introduced from this post: "https://developers.google.com/web/updates/2017/12/chrome-loadtimes-deprecated"
+  // But the latest Chrome (68) seems use the value like this: "http/2+quic/43"
   // Handle both cases for compatible
+  
+  // Some of this taken from "https://www.iana.org/assignments/tls-extensiontype-values/tls-extensiontype-values.xhtml"
   if (message === "hq") {
     title = "HTTP/2 + QUIC";
     icon = "hq";
   } else if (message.startsWith("h3")) {
     title = "HTTP/3";
     icon = "h3";
-  } else if (message.startsWith("h2")) { // "h2", "h2c"
+  } else if (message.startsWith("h2")) { // "h2" is "HTTP/2 over TLS", "h2c" is "HTTP/2 over TCP"
     title = "HTTP/2";
     icon = "h2";
   } else if (message.includes("quic")) {
