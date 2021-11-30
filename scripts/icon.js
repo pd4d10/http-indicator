@@ -7,10 +7,11 @@ const icon = fs.readFileSync(path.join(__dirname, "flash-sharp.svg"), "utf8");
 
 // Colors: https://material.io/resources/color/#!/?view.left=0&view.right=0
 [
-  ["h1", "#bdbdbd", , 38],
-  ["h2", "#304ffe", , 38],
-  ["hq", "#d50000", , 38],
-  ["h3", "#ff6d00", , 38],
+  ["h1",   "#bdbdbd", , 38],
+  ["h2",   "#304ffe", , 38],
+  ["hq",   "#d50000", , 38],
+  ["h3",   "#ff6d00", , 38],
+  ["spdy", "#009515", , 38],
   ["icon", "#ff6d00", , 128],
   ["default", , "#bdbdbd", 38],
 ].forEach(([name, fill, stroke, size]) => {
