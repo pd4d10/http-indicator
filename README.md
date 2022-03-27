@@ -15,6 +15,7 @@ Indicator for HTTP/2, QUIC and HTTP/3. Install it from [Chrome Web Store](https:
 This extension is an alternative to [HTTP/2 and SPDY indicators](https://chrome.google.com/webstore/detail/http2-and-spdy-indicator/mpbpobfflnpcgagjijhmgnchggcjblin). It uses [Navigation Timing 2](https://www.w3.org/TR/navigation-timing-2/) instead of [deprecated](https://developers.google.com/web/updates/2017/12/chrome-loadtimes-deprecated) `chrome.loadTimes()` API.
 
 ## Indicator explanation
+
 <img width="38" src="/public/icons/default.png" alt="default" /> = Default icon <br>
 <img width="38" src="/public/icons/h1.png" alt="HTTP1" /> = HTTP1 icon <br>
 <img width="38" src="/public/icons/h2.png" alt="HTTP2" /> = HTTP2 icon <br>

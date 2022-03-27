@@ -1,9 +1,10 @@
 {
+  "private": true,
   "scripts": {
     "dev": "norm",
     "build": "norm build"
   },
   "devDependencies": {
-    "@norm/cli": "^0.3.5"
+    "@norm/cli": "^0.4.28"
   }
 }
