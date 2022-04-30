@@ -1,10 +1,9 @@
-// @ts-check
-import { defineConfig } from "@norm/cli";
+import { defineConfig } from "vite";
+import webExtension from "@vite-preset/web-extension";
 
 export default defineConfig({
-  projects: {
-    ".": {
-      type: "web-extension",
+  plugins: [
+    webExtension({
       manifest: {
         manifest_version: 2,
         name: "HTTP Indicator",
@@ -29,6 +28,6 @@ export default defineConfig({
           default_icon: "icons/default.png",
         },
       },
-    },
-  },
+    }),
+  ],
 });
