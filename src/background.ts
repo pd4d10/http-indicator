@@ -1,5 +1,7 @@
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  const tabId = sender.tab.id;
+  const tabId = sender.tab?.id;
+  if (!tabId) return;
+
   // console.log(message, tabId)
   let title = message;
   let icon = "h1";

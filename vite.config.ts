@@ -20,7 +20,7 @@ export default defineConfig({
         content_scripts: [
           {
             matches: ["<all_urls>"],
-            js: ["src/content-script.js"],
+            js: ["src/content-script.ts"],
             run_at: "document_end",
           },
         ],
