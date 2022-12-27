@@ -2,9 +2,13 @@ lockfileVersion: 5.4
 
 specifiers:
   plasmo: ^0.60.2
+  rescript: ^10.1.0
+  rescript-webext: ^0.2.0
 
 devDependencies:
   plasmo: 0.60.2
+  rescript: 10.1.0
+  rescript-webext: link:../rescript-webext
 
 packages:
 
@@ -2877,7 +2881,7 @@ packages:
       tslib: 2.4.1
     optionalDependencies:
       errno: 0.1.8
-      graceful-fs: 4.2.8
+      graceful-fs: 4.2.10
       image-size: 0.5.5
       make-dir: 2.1.0
       mime: 1.6.0
@@ -3714,6 +3718,12 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       rc: 1.2.8
+    dev: true
+
+  /rescript/10.1.0:
+    resolution: {integrity: sha512-85KLtBECo+hYwObbifXk5xpxUCUFMWgCR1w7hDDGhhXIXqEpHQ2ds6o++YPxzXjLuU1/qA7Iovq2zUX4opejQw==}
+    hasBin: true
+    requiresBuild: true
     dev: true
 
   /resolve-alpn/1.2.1:
