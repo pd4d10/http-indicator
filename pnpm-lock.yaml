@@ -3,12 +3,12 @@ lockfileVersion: 5.4
 specifiers:
   plasmo: ^0.60.2
   rescript: ^10.1.0
-  rescript-webext: ^0.2.0
+  rescript-webext: ^0.3.0
 
 devDependencies:
   plasmo: 0.60.2
   rescript: 10.1.0
-  rescript-webext: link:../rescript-webext
+  rescript-webext: 0.3.0
 
 packages:
 
@@ -3718,6 +3718,16 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       rc: 1.2.8
+    dev: true
+
+  /rescript-webapi/0.7.0:
+    resolution: {integrity: sha512-fA1LPXSmQY3HtcIStQ2sHu9Xye1XLxd4JvkGQMupux9Q6Tp/jbcdh7bnCaGwHW6aI1QFmTmA/xWxUMb6oPphsQ==}
+    dev: true
+
+  /rescript-webext/0.3.0:
+    resolution: {integrity: sha512-N2jQjfjMBilIj8rnhebBS6k75ANUkU17nhEgziJ4PBOsO/OikGG3zgxb0nX6Dlbo790d3HuAn359a0Zp9GnXQw==}
+    dependencies:
+      rescript-webapi: 0.7.0
     dev: true
 
   /rescript/10.1.0:

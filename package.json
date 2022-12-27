@@ -12,7 +12,7 @@
   "devDependencies": {
     "plasmo": "^0.60.2",
     "rescript": "^10.1.0",
-    "rescript-webext": "^0.2.0"
+    "rescript-webext": "^0.3.0"
   },
   "manifest": {
     "browser_action": {
