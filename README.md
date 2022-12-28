@@ -16,12 +16,12 @@ This extension is an alternative to [HTTP/2 and SPDY indicators](https://chrome.
 
 ## Indicator explanation
 
-<img width="19" src="/public/icons/default.png" alt="default" /> = Default icon <br>
-<img width="19" src="/public/icons/h1.png" alt="HTTP1" /> = HTTP1 icon <br>
-<img width="19" src="/public/icons/h2.png" alt="HTTP2" /> = HTTP2 icon <br>
-<img width="19" src="/public/icons/h3.png" alt="HTTP3" /> = HTTP3 icon <br>
-<img width="19" src="/public/icons/hq.png" alt="QUIC" /> = QUIC icon <br>
-<img width="19" src="/public/icons/spdy.png" alt="SPDY" /> = SPDY icon <br>
+<img width="19" src="assets/default.png" alt="default" /> = Default icon <br>
+<img width="19" src="assets/h1.png" alt="HTTP1" /> = HTTP1 icon <br>
+<img width="19" src="assets/h2.png" alt="HTTP2" /> = HTTP2 icon <br>
+<img width="19" src="assets/h3.png" alt="HTTP3" /> = HTTP3 icon <br>
+<img width="19" src="assets/hq.png" alt="QUIC" /> = QUIC icon <br>
+<img width="19" src="assets/spdy.png" alt="SPDY" /> = SPDY icon <br>
 
 ## Credits
 
