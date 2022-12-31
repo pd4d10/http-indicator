@@ -10,7 +10,7 @@
     "dev": "plasmo dev --target=firefox-mv2"
   },
   "devDependencies": {
-    "plasmo": "^0.60.2",
+    "plasmo": "^0.61.1",
     "rescript": "^10.1.0",
     "rescript-webext": "^0.3.0"
   },
