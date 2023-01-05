@@ -30,9 +30,11 @@ const icon = fs.readFileSync(path.join(__dirname, "flash-sharp.svg"), "utf8");
     );
   }
 
-  fs.writeFileSync(path.join(__dirname, "../icons", `${name}.svg`), mIcon);
+  fs.writeFileSync(path.join(__dirname, "../assets", `${name}.svg`), mIcon);
 
-  execSync(`rm -rf ${name}.png && svg2png ${name}.svg`, {
-    cwd: path.join(__dirname, "../icons"),
+  execSync(`rm -rf ${name}.png && npx svg2png ${name}.svg`, {
+    cwd: path.join(__dirname, "../assets"),
   });
+
+  execSync("rm -rf assets/*.svg");
 });
