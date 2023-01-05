@@ -34,13 +34,13 @@ Chrome.Runtime.OnMessage.addListener((message, sender, _sendResponse) => {
         }
       }
 
-      Chrome.BrowserAction.setIcon({path: icon, tabId})
-      Chrome.BrowserAction.setTitle({tabId, title})->ignore
+      Chrome.Action.setIcon({path: icon, tabId})
+      Chrome.Action.setTitle({tabId, title})->ignore
     }
   }
 })
 
-Chrome.BrowserAction.OnClicked.addListener(_tab => {
+Chrome.Action.OnClicked.addListener(_tab => {
   Chrome.Tabs.create({
     url: "chrome://net-export",
   })->ignore

@@ -6,16 +6,16 @@
   "description": "Indicator for HTTP/2, QUIC and HTTP/3",
   "homepage": "https://github.com/pd4d10/http-indicator",
   "scripts": {
-    "build": "plasmo build --target=firefox-mv2",
-    "dev": "plasmo dev --target=firefox-mv2"
+    "build": "rescript && plasmo build",
+    "dev": "plasmo dev"
   },
   "devDependencies": {
     "plasmo": "^0.61.3",
     "rescript": "^10.1.0",
-    "rescript-webext": "^0.3.0"
+    "rescript-webext": "^0.4.0"
   },
   "manifest": {
-    "browser_action": {
+    "action": {
       "default_icon": "/assets/default.png"
     }
   }
