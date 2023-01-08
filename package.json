@@ -1,7 +1,7 @@
 {
   "name": "http-indicator",
   "displayName": "HTTP Indicator",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "private": true,
   "description": "Indicator for HTTP/2, QUIC and HTTP/3",
   "homepage": "https://github.com/pd4d10/http-indicator",
