@@ -4,7 +4,7 @@
 @module("url:/assets/hq.png") external hq: string = "default"
 @module("url:/assets/spdy.png") external spdy: string = "default"
 
-Chrome.Runtime.OnMessage.addListener((message, sender, _sendResponse) => {
+Chrome.Runtime.OnMessage.addListener((message, sender, sendResponse) => {
   switch sender.tab->Option.flatMap(tab => tab.id) {
   | None => ()
   | Some(tabId) => {
@@ -38,7 +38,9 @@ Chrome.Runtime.OnMessage.addListener((message, sender, _sendResponse) => {
       Chrome.Action.setTitle({tabId, title})->ignore
     }
   }
-  return true
+
+  // https://github.com/pd4d10/http-indicator/pull/17
+  sendResponse()
 })
 
 Chrome.Action.OnClicked.addListener(_tab => {
