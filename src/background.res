@@ -38,6 +38,7 @@ Chrome.Runtime.OnMessage.addListener((message, sender, _sendResponse) => {
       Chrome.Action.setTitle({tabId, title})->ignore
     }
   }
+  return true
 })
 
 Chrome.Action.OnClicked.addListener(_tab => {
