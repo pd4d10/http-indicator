@@ -1,14 +1,14 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/chrome': ^0.0.243
   plasmo: ^0.82.0
-  rescript: ^10.1.0
-  rescript-webext: ^0.4.1
+  ts-pattern: ^5.0.5
 
 devDependencies:
+  '@types/chrome': 0.0.243
   plasmo: 0.82.0
-  rescript: 10.1.0
-  rescript-webext: 0.4.1
+  ts-pattern: 5.0.5
 
 packages:
 
@@ -2357,8 +2357,29 @@ packages:
     engines: {node: '>=10.13.0'}
     dev: true
 
+  /@types/chrome/0.0.243:
+    resolution: {integrity: sha512-4PHv0kxxxpZFHWPBiJJ9TWH8kbx0567j1b2djnhpJjpiSGNI7UKkz7dSEECBtQ0B3N5nQTMwSB/5IopkWGAbEA==}
+    dependencies:
+      '@types/filesystem': 0.0.32
+      '@types/har-format': 1.2.11
+    dev: true
+
   /@types/estree/1.0.1:
     resolution: {integrity: sha512-LG4opVs2ANWZ1TJoKc937iMmNstM/d0ae1vNbnBvBhqCSezgVUOzcLCqbI5elV8Vy6WKwKjaqR+zO9VKirBBCA==}
+    dev: true
+
+  /@types/filesystem/0.0.32:
+    resolution: {integrity: sha512-Yuf4jR5YYMR2DVgwuCiP11s0xuVRyPKmz8vo6HBY3CGdeMj8af93CFZX+T82+VD1+UqHOxTq31lO7MI7lepBtQ==}
+    dependencies:
+      '@types/filewriter': 0.0.29
+    dev: true
+
+  /@types/filewriter/0.0.29:
+    resolution: {integrity: sha512-BsPXH/irW0ht0Ji6iw/jJaK8Lj3FJemon2gvEqHKpCdDCeemHa+rI3WBGq5z7cDMZgoLjY40oninGxqk+8NzNQ==}
+    dev: true
+
+  /@types/har-format/1.2.11:
+    resolution: {integrity: sha512-T232/TneofqK30AD1LRrrf8KnjLvzrjWDp7eWST5KoiSzrBfRsLrWDPk4STQPW4NZG6v2MltnduBVmakbZOBIQ==}
     dev: true
 
   /@types/http-cache-semantics/4.0.1:
@@ -4642,22 +4663,6 @@ packages:
       rc: 1.2.8
     dev: true
 
-  /rescript-webapi/0.7.0:
-    resolution: {integrity: sha512-fA1LPXSmQY3HtcIStQ2sHu9Xye1XLxd4JvkGQMupux9Q6Tp/jbcdh7bnCaGwHW6aI1QFmTmA/xWxUMb6oPphsQ==}
-    dev: true
-
-  /rescript-webext/0.4.1:
-    resolution: {integrity: sha512-kWkq+1yfXcTrfw6/gr8NTR1+8lic20wJQmJTMZczFhLCjygaEdwc9Ot2VQyqNR8RTegk/plmTI+KoI2aVcJYUQ==}
-    dependencies:
-      rescript-webapi: 0.7.0
-    dev: true
-
-  /rescript/10.1.0:
-    resolution: {integrity: sha512-85KLtBECo+hYwObbifXk5xpxUCUFMWgCR1w7hDDGhhXIXqEpHQ2ds6o++YPxzXjLuU1/qA7Iovq2zUX4opejQw==}
-    hasBin: true
-    requiresBuild: true
-    dev: true
-
   /resolve-alpn/1.2.1:
     resolution: {integrity: sha512-0a1F4l73/ZFZOakJnQ3FvkJ2+gSTQWz/r2KE5OdDY0TxPm5h4GkqkWWfM47T7HsbnOtcJVEF4epCVy6u7Q3K+g==}
     dev: true
@@ -5067,6 +5072,10 @@ packages:
 
   /ts-interface-checker/0.1.13:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
+    dev: true
+
+  /ts-pattern/5.0.5:
+    resolution: {integrity: sha512-tL0w8U/pgaacOmkb9fRlYzWEUDCfVjjv9dD4wHTgZ61MjhuMt46VNWTG747NqW6vRzoWIKABVhFSOJ82FvXrfA==}
     dev: true
 
   /tslib/2.6.1:

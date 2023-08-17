@@ -6,13 +6,13 @@
   "description": "Indicator for HTTP/2, QUIC and HTTP/3",
   "homepage": "https://github.com/pd4d10/http-indicator",
   "scripts": {
-    "build": "rescript && plasmo build",
+    "build": "plasmo build",
     "dev": "plasmo dev"
   },
   "devDependencies": {
+    "@types/chrome": "^0.0.243",
     "plasmo": "^0.82.0",
-    "rescript": "^10.1.0",
-    "rescript-webext": "^0.4.1"
+    "ts-pattern": "^5.0.5"
   },
   "manifest": {
     "action": {
