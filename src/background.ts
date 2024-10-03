@@ -39,7 +39,7 @@ chrome.runtime.onMessage.addListener(
 
     // https://github.com/pd4d10/http-indicator/pull/17
     sendResponse();
-  }
+  },
 );
 
 chrome.action.onClicked.addListener(() => {

@@ -18,7 +18,7 @@ const icon = fs.readFileSync(path.join(__dirname, "flash-sharp.svg"), "utf8");
 ].forEach(([name, fill, stroke, size]) => {
   let mIcon = icon.replace(
     "width='512' height='512'",
-    `width='${size}' height='${size}'`
+    `width='${size}' height='${size}'`,
   );
   if (fill) {
     mIcon = mIcon.replace("<path", `<path fill="${fill}"`);
@@ -26,7 +26,7 @@ const icon = fs.readFileSync(path.join(__dirname, "flash-sharp.svg"), "utf8");
   if (stroke) {
     mIcon = mIcon.replace(
       "<path",
-      `<path stroke="${stroke}" stroke-width="16" fill="none"`
+      `<path stroke="${stroke}" stroke-width="16" fill="none"`,
     );
   }
 
