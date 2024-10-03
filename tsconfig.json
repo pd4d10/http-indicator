@@ -1,8 +1,7 @@
 {
-  "extends": "plasmo/templates/tsconfig.base",
-  "exclude": ["node_modules"],
-  "include": [".plasmo/index.d.ts", "./**/*.ts", "./**/*.tsx"],
+  "include": ["src"],
   "compilerOptions": {
+    "lib": ["ESNext"],
     "strict": true
   }
 }

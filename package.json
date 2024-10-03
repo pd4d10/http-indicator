@@ -1,23 +1,17 @@
 {
   "name": "http-indicator",
-  "displayName": "HTTP Indicator",
+  "type": "module",
   "version": "1.2.2",
   "private": true,
-  "description": "Indicator for HTTP/2, QUIC and HTTP/3",
-  "homepage": "https://github.com/pd4d10/http-indicator",
   "scripts": {
-    "build": "plasmo build",
-    "dev": "plasmo dev"
+    "build": "vite build",
+    "dev": "vite"
   },
   "devDependencies": {
-    "@types/chrome": "^0.0.243",
-    "plasmo": "^0.82.0",
-    "ts-pattern": "^5.0.5"
+    "@crxjs/vite-plugin": "^1.0.14",
+    "@types/chrome": "^0.0.276",
+    "ts-pattern": "^5.4.0",
+    "vite": "^5.4.8"
   },
-  "packageManager": "pnpm@8.6.12",
-  "manifest": {
-    "action": {
-      "default_icon": "/assets/default.png"
-    }
-  }
+  "packageManager": "pnpm@9.12.0+sha512.4abf725084d7bcbafbd728bfc7bee61f2f791f977fd87542b3579dcb23504d170d46337945e4c66485cd12d588a0c0e570ed9c477e7ccdd8507cf05f3f92eaca"
 }
