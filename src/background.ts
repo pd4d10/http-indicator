@@ -1,9 +1,9 @@
 import { match } from "ts-pattern";
-import h1 from "./images/h1.png";
-import h2 from "./images/h2.png";
-import h3 from "./images/h3.png";
-import hq from "./images/hq.png";
-import spdy from "./images/spdy.png";
+import h1 from "../assets/h1.png";
+import h2 from "../assets/h2.png";
+import h3 from "../assets/h3.png";
+import hq from "../assets/hq.png";
+import spdy from "../assets/spdy.png";
 
 chrome.runtime.onMessage.addListener(
   (message: string, sender, sendResponse) => {

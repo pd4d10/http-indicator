@@ -1,20 +1,23 @@
 // @ts-check
-import { readFileSync, writeFileSync, unlinkSync } from "fs";
+import { readFileSync, writeFileSync, unlinkSync, copyFileSync } from "fs";
 import { execSync } from "child_process";
+import { chdir } from "process";
 
 // Icons: https://ionicons.com/
 const icon = readFileSync("scripts/flash-sharp.svg", "utf8");
 
+chdir("assets");
+
 // Colors: https://material.io/resources/color/#!/?view.left=0&view.right=0
 [
-  ["src/images/h1", "#bdbdbd", , 38],
-  ["src/images/h2", "#304ffe", , 38],
-  ["src/images/hq", "#d50000", , 38],
-  ["src/images/h3", "#ff6d00", , 38],
-  ["src/images/spdy", "#009515", , 38],
-  ["public/icon", "#ff6d00", , 128],
-  ["public/default", , "#bdbdbd", 38],
-].forEach(([fullPath, fill, stroke, size]) => {
+  ["h1", "#bdbdbd", , 38],
+  ["h2", "#304ffe", , 38],
+  ["hq", "#d50000", , 38],
+  ["h3", "#ff6d00", , 38],
+  ["spdy", "#009515", , 38],
+  ["icon", "#ff6d00", , 128, true],
+  ["default", , "#bdbdbd", 38, true],
+].forEach(([name, fill, stroke, size, copyToPublic]) => {
   let mIcon = icon;
   if (fill) {
     mIcon = mIcon.replace("<path", `<path fill="${fill}"`);
@@ -26,11 +29,13 @@ const icon = readFileSync("scripts/flash-sharp.svg", "utf8");
     );
   }
 
-  unlinkSync(`${fullPath}.png`);
-  writeFileSync(`${fullPath}.svg`, mIcon);
-  execSync(
-    `resvg --width ${size} --height ${size} ${fullPath}.svg ${fullPath}.png`,
-    { stdio: "inherit" },
-  );
-  unlinkSync(`${fullPath}.svg`);
+  writeFileSync(`${name}.svg`, mIcon);
+  execSync(`resvg --width ${size} --height ${size} ${name}.svg ${name}.png`, {
+    stdio: "inherit",
+  });
+
+  if (copyToPublic) {
+    copyFileSync(`${name}.png`, `../public/${name}.png`);
+  }
+  unlinkSync(`${name}.svg`);
 });

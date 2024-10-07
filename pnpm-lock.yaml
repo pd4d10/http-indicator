@@ -10,16 +10,19 @@ importers:
     devDependencies:
       '@crxjs/vite-plugin':
         specifier: ^1.0.14
-        version: 1.0.14(vite@5.4.8)
+        version: 1.0.14(vite@5.4.8(@types/node@22.7.4))
       '@types/chrome':
         specifier: ^0.0.276
         version: 0.0.276
+      '@types/node':
+        specifier: ^22.7.4
+        version: 22.7.4
       ts-pattern:
         specifier: ^5.4.0
         version: 5.4.0
       vite:
         specifier: ^5.4.8
-        version: 5.4.8
+        version: 5.4.8(@types/node@22.7.4)
 
 packages:
 
@@ -399,6 +402,9 @@ packages:
   '@types/har-format@1.2.16':
     resolution: {integrity: sha512-fluxdy7ryD3MV6h8pTfTYpy/xQzCFC7m89nOH9y94cNqJ1mDIDPut7MnRHI3F6qRmh/cT2fUjG1MLdCNb4hE9A==}
 
+  '@types/node@22.7.4':
+    resolution: {integrity: sha512-y+NPi1rFzDs1NdQHHToqeiX2TIS79SWEAw9GYhkkx8bD0ChpfqC+n2j5OXOCpzfojBEBt6DnEnnG9MY0zk1XLg==}
+
   '@vitejs/plugin-react@4.3.2':
     resolution: {integrity: sha512-hieu+o05v4glEBucTcKMK3dlES0OeJlD9YVOAPraVMOInBCwzumaIFiUjr4bHK7NPgnAHgiskUoceKercrN8vg==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -725,6 +731,9 @@ packages:
   uberproto@1.2.0:
     resolution: {integrity: sha512-pGtPAQmLwh+R9w81WVHzui1FfedpQWQpiaIIfPCwhtsBez4q6DYbJFfyXPVHPUTNFnedAvNEnkoFiLuhXIR94w==}
 
+  undici-types@6.19.8:
+    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
+
   undici@6.19.8:
     resolution: {integrity: sha512-U8uCCl2x9TK3WANvmBavymRzxbfFYG+tAu+fgx3zxQy3qdagQqBLwJVrdyO1TBfUXvfKveMKJZhpvUYoOjM+4g==}
     engines: {node: '>=18.17'}
@@ -933,7 +942,7 @@ snapshots:
       to-fast-properties: 2.0.0
     optional: true
 
-  '@crxjs/vite-plugin@1.0.14(vite@5.4.8)':
+  '@crxjs/vite-plugin@1.0.14(vite@5.4.8(@types/node@22.7.4))':
     dependencies:
       '@rollup/pluginutils': 4.2.1
       '@webcomponents/custom-elements': 1.6.0
@@ -949,9 +958,9 @@ snapshots:
       picocolors: 1.1.0
       react-refresh: 0.13.0
       rollup: 2.79.2
-      vite: 5.4.8
+      vite: 5.4.8(@types/node@22.7.4)
     optionalDependencies:
-      '@vitejs/plugin-react': 4.3.2(vite@5.4.8)
+      '@vitejs/plugin-react': 4.3.2(vite@5.4.8(@types/node@22.7.4))
     transitivePeerDependencies:
       - supports-color
 
@@ -1151,14 +1160,18 @@ snapshots:
 
   '@types/har-format@1.2.16': {}
 
-  '@vitejs/plugin-react@4.3.2(vite@5.4.8)':
+  '@types/node@22.7.4':
+    dependencies:
+      undici-types: 6.19.8
+
+  '@vitejs/plugin-react@4.3.2(vite@5.4.8(@types/node@22.7.4))':
     dependencies:
       '@babel/core': 7.25.7
       '@babel/plugin-transform-react-jsx-self': 7.25.7(@babel/core@7.25.7)
       '@babel/plugin-transform-react-jsx-source': 7.25.7(@babel/core@7.25.7)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 5.4.8
+      vite: 5.4.8(@types/node@22.7.4)
     transitivePeerDependencies:
       - supports-color
     optional: true
@@ -1518,6 +1531,8 @@ snapshots:
 
   uberproto@1.2.0: {}
 
+  undici-types@6.19.8: {}
+
   undici@6.19.8: {}
 
   universalify@2.0.1: {}
@@ -1529,12 +1544,13 @@ snapshots:
       picocolors: 1.1.0
     optional: true
 
-  vite@5.4.8:
+  vite@5.4.8(@types/node@22.7.4):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.47
       rollup: 4.24.0
     optionalDependencies:
+      '@types/node': 22.7.4
       fsevents: 2.3.3
 
   whatwg-encoding@3.1.1:
