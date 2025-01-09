@@ -1,3 +1,6 @@
+/// <reference types="vite/client" />
+/// <reference types="chrome" />
+
 import { match } from "ts-pattern";
 import h1 from "../assets/h1.png";
 import h2 from "../assets/h2.png";
@@ -39,7 +42,7 @@ chrome.runtime.onMessage.addListener(
 
     // https://github.com/pd4d10/http-indicator/pull/17
     sendResponse();
-  },
+  }
 );
 
 chrome.action.onClicked.addListener(() => {
